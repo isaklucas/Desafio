@@ -1,0 +1,93 @@
+<div class="mat-elevation-z8" style="box-shadow: none; border-width: 2px ;">
+    <table mat-table [dataSource]="dataSource" >
+    
+      
+    
+      <!-- Checkbox Coluna -->
+      <ng-container matColumnDef="select">
+        <th mat-header-cell *matHeaderCellDef>
+        </th>
+        <td mat-cell *matCellDef="let row" style="padding: 15px;">
+          <mat-checkbox (click)="$event.stopPropagation()"
+                        (change)="$event ? selection.toggle(row) : null"
+                        [checked]="selection.isSelected(row)"
+                        [aria-label]="checkboxLabel(row)">
+          </mat-checkbox>
+        </td>
+      </ng-container>
+    
+      <!-- Usuario coluna -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef style="padding: 15px; font-family: Roboto; text-align: center;"> USUÁRIO </th>
+        <td mat-cell *matCellDef="let element" style="padding: 15px;"> {{element.name}} </td>
+      </ng-container>
+    
+      <!-- Email coluna -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef style="padding: 15px; text-align: center;"> EMAIL </th>
+        <td mat-cell *matCellDef="let element" style="padding: 15px;"> {{element.email}} </td>
+      </ng-container>
+    
+      <!-- data inclusao coluna -->
+      <ng-container matColumnDef="inclusing">
+        <th mat-header-cell *matHeaderCellDef style="padding: 15px; text-align: center;"> DATA DE INCLUSÃO </th>
+        <td mat-cell *matCellDef="let element" style="padding: 15px;"> {{element.inclusing}} </td>
+      </ng-container>
+    
+      <!-- data alteracao coluna -->
+      <ng-container matColumnDef="alteration">
+        <th mat-header-cell *matHeaderCellDef style="padding: 15px; text-align: center;"> DATA DE ALTERAÇÃO </th>
+        <td mat-cell *matCellDef="let element" style="padding: 15px;"> {{element.alteration}} </td>
+      </ng-container>
+    
+      <!-- regras coluna -->
+      <ng-container matColumnDef="regras">
+        <th mat-header-cell *matHeaderCellDef style="padding: 15px; text-align: center;"> regras </th>
+        <td mat-cell *matCellDef="let element" style="padding: 15px;"> {{element.regras}} </td>
+      </ng-container>
+    
+      <!-- status coluna -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef style="padding: 15px; text-align: center; "> status </th>
+        <td mat-cell *matCellDef="let element" style="padding: 15px; color: #31BA1F;"> {{element.status}} </td>
+      </ng-container>
+    
+      <!-- acoes coluna -->
+      <ng-container matColumnDef="acoes" stickyEnd>
+        <th mat-header-cell *matHeaderCellDef style="padding: 15px; text-align: center;"> AÇÕES </th>
+        <th mat-header-cell *matHeaderCellDef ></th>
+        <td mat-cell *matCellDef="let element" style="padding: 15px;">
+          <mat-drawer-container autosize style="background-color: transparent; border: none; ">
+            <mat-drawer #drawer style="background-color: transparent; height: 40px;" mode="side">
+              <button mat-icon-button style="background-color: transparent; border: none; height: 30px;"><mat-icon style="height: 20px; font-size: 20px;">delete</mat-icon></button>
+              <button mat-icon-button style="background-color: transparent; border: none; height: 30px;" ><mat-icon style="height: 20px; font-size: 20px;">mode_edit</mat-icon></button>
+              
+            </mat-drawer>
+          
+            <div >
+              <button type="button" mat-button (click)="drawer.toggle()">
+                <mat-icon>more_horiz</mat-icon>
+              </button>
+            </div>
+          
+          </mat-drawer-container>
+        </td>
+      </ng-container>
+    
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+          (click)="selection.toggle(row)">
+      </tr>
+    </table>
+<div style="margin: 24px 400px;">
+    <button mat-flat-button style="height: 48px; color: #666666;">Primeiro</button>
+    <button mat-flat-button style="margin-left: 8px; height: 48px; color: #666666;">Anterior</button>
+    <button mat-flat-button style="margin-left: 8px; height: 48px; background-color: #D83367; color: white;">1</button>
+    <button mat-flat-button style="margin-left: 8px; height: 48px;  color: #666666;">Próximo</button>
+    <button mat-flat-button style="margin-left: 8px; height: 48px; color: #666666;">Último</button>
+</div>
+  
+
+    
+    </div>

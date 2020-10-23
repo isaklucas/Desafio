@@ -1,0 +1,60 @@
+
+
+
+<mat-drawer-container class="sidebar"  style="background-color: transparent; ">
+    <mat-drawer #drawer class="sidenav" position="end" mode="over" style="background-color: #F5F5F5 ; width: 480px; ">
+      
+        <mat-toolbar style="height: 96px; background-color: white;">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+             <mat-icon>tune</mat-icon>
+           </button>
+           <span style="font-family: Audiowide; font-size: 20px; margin-left: 16px;" >Filter</span>
+           <span class="example-spacer"></span>
+           <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>close</mat-icon>
+          </button>
+
+          
+         </mat-toolbar>
+
+         <p style="text-align: left; margin: 40px 24px; color: #666666; font-size: 16px;">Utilize os filtros abaixo para refinar os resultados da tabela, clique no botão APLICAR para salvar as alterações.</p>
+         
+         <mat-form-field style="text-align: left; margin: 0px 24px; color: black; font-size: 16px; width: 90%;" class="example-full-width" appearance="fill"> 
+            <mat-label > <mat-icon>date_range</mat-icon> <span style="color: #D83367; margin-left: 16px;">TODAS AS DATAS DE INCLUSÃO</span></mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          
+          <mat-form-field style="text-align: left; margin: 0px 24px; color: black; font-size: 16px; width: 90%;" class="example-full-width" appearance="fill"> 
+            <mat-label> <mat-icon>date_range</mat-icon> <span style="color: #D83367; margin-left: 16px;">TODAS AS DATAS DE ALTERAÇÃO</span></mat-label>
+            <input matInput [matDatepicker]="data">
+            <mat-datepicker-toggle matSuffix [for]="data">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #data></mat-datepicker>
+          </mat-form-field>
+
+          <mat-toolbar style="background-color: rgba(0,0,0,.04); width: 90%; margin: 0px 24px;">
+            <mat-label> <mat-icon style="font-size: 16px; font-weight: 400;">hdr_strong </mat-icon> <span style="color: #D83367; margin-left: 5px; width: 90%; font-size: 16px; font-weight: 400;">ATIVOS E INATIVOS</span></mat-label>
+            <span class="example-spacer"></span><mat-icon style=" font-weight: 400;">keyboard_arrow_down </mat-icon>
+
+        
+
+         </mat-toolbar>
+
+         <button style="width: 90%; margin: 40px 24px; height: 67px; font-size: 16px;  box-shadow: none; color: #D83367; background-color: transparent; border-color: #D83367;" mat-stroked-button >APLICAR</button>
+
+    </mat-drawer>
+  
+    <div  class="sidenav-content">
+        <app-header (tuneClick)="drawer.toggle()" > </app-header>
+        <app-table></app-table>
+        <app-footer class="footer"></app-footer>
+    </div>
+  
+  </mat-drawer-container> 
+
+

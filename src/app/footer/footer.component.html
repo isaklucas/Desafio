@@ -1,0 +1,23 @@
+<div class="footer">
+    <mat-toolbar  style="background-color: #333333; height: 47px; font-size: 14px; " >
+        <mat-icon style="color: #FF8700; " >radio_button_checked </mat-icon>
+        <a  style= "color: #FF8700; margin-left: 6px; font-family: Audiowide;">NO AR</a> 
+        
+       <mat-icon style="color: #666666; margin-left: 85px;">tv</mat-icon>
+        <a  style="gap: 0.5rem; color:  #E9E9E9; margin-left: 8px;"> ENCONTRO - 10:00 </a>
+        <mat-icon style="color: #666666; margin-left: 40px;">refresh </mat-icon>
+        <a  style="gap: 0.5rem; color: #E9E9E9 ; margin-left: 6px;">
+             Última atualização em {{datanow  | date: 'hh:mm'}}
+        </a>
+        
+        
+        <span class="example-spacer"></span>
+            <a  style="color: #E9E9E9; font-size: 14px;">
+                {{datanow  | date: 'fullDate'}} 
+            </a>
+            <a  style="color: #FF8700 ;font-family: Audiowide; font-size: 24px; margin-left: 16px;">
+                
+               // {{horanow  | date: 'hh:mm:ss'}} 
+            </a>
+    </mat-toolbar>
+</div>
