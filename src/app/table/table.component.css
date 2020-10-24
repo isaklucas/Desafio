@@ -10,6 +10,47 @@ table {
   
   
   tr:nth-child(even) {
-    background-color: #F5F5F5;
     background-color: #E9E9E9;
+  }
+  .mat-row:nth-child(odd){
+    background-color: #F5F5F5;
+    }
+
+  .mat-header-cell {
+    padding: 15px; 
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    font-size: 12PX;
+   }
+
+   .mat-drawer-container {
+    background-color: transparent; 
+    border: none;
+  }
+
+  .mat-drawer {
+    background-color: transparent; 
+    height: 40px;
+  }
+
+  .mat-cell{
+    padding: 15px;
+
+
+  }
+
+  .paginator {
+text-align: center;
+margin: 24px 400px;
+  }
+
+  .mat-flat-button {
+    margin-left: 8px; 
+    height: 48px; 
+    color: #666666;
+  }
+
+  .sidebar {
+    background-color: #F5F5F5
   }

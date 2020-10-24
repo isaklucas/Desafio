@@ -6,3 +6,69 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
+.aplicar {
+width: 90%; 
+margin: 40px 24px; 
+height: 67px; 
+font-size: 16px;  
+box-shadow: none; 
+color: #D83367; 
+background-color: transparent; 
+border-color: #D83367;
+
+}
+
+.ativo-inativo{
+    background-color: rgba(0,0,0,.04); 
+    width: 90%; 
+    margin: 0px 24px;
+
+}
+
+.icone {
+    font-size: 16px; 
+    font-weight: 400;
+    color: #D83367;
+}
+
+.texto {
+    color: #D83367; 
+    margin-left: 5px; 
+    width: 90%; 
+    font-size: 16px; 
+    font-weight: 400;
+}
+
+
+.botao-calendario {
+   text-align: left; 
+   margin: 0px 24px; 
+   color: black; 
+   font-size: 16px; 
+   width: 90%;
+}
+
+.texto-cal{
+    color: #D83367; 
+    margin-left: 16px;
+}
+
+.mensg {
+    text-align: left; 
+    margin: 40px 24px; 
+    color: #666666; 
+    font-size: 16px;
+}
+
+.header-side{
+    height: 96px; 
+    background-color: white;
+}
+
+.filter-text {
+    font-family: Audiowide; 
+    font-size: 20px; 
+    margin-left: 16px;
+
+}

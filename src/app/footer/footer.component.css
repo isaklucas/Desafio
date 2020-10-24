@@ -7,3 +7,21 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
+  .barra {
+    background-color: #333333; 
+    height: 47px; 
+    font-size: 14px;
+  }
+
+.no-ar{
+    color: #FF8700; 
+    margin-left: 6px; 
+    font-family: Audiowide;
+}
+
+.texto{
+    gap: 0.5rem; 
+    color:  #E9E9E9; 
+    margin-left: 8px;
+}
